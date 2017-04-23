@@ -22,7 +22,7 @@
             <label for="name">Child Name</label>
             <input class="form-control" id='name' name="name" placeholder="Name of the child">
             <label for="date">Date of Birth</label>
-            <input @change="dotheDate" class="form-control" id='datepicker' name="date" placeholder="DOB">
+            <input class="form-control" id='datepicker' name="date" placeholder="DOB">
 
           </div>
         <div class="col-md-6" >
@@ -33,19 +33,19 @@
             </tr>
             <tr v-for=" (i,ix) in datestr">
               <td>{{ i }}</td>
-              <td>{{ dateres[ix-1] }}</td>
+              <td>{{ dateres[ix] }}</td>
             </tr>
             </table>
             <button v-on:click="blow" class="btn btn-default">pop</button>
         </div>
-        <div class="col-md-3"></div>
+        <div class="col-md-3">{{ message }}</div>
         </div>
       </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    
     <script src="js/vue.js"></script>
+    <script src="js/moment.min.js"></script>
     <script src="js/main.js"></script> 
   </body>
 </html>
