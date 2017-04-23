@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>IMMUNATION RECORD</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet" >
+
+    
+    
+    
+  </head>
+  <body>
+      <div class="container-fluid">
+        <div class="row" id='myapp'>
+          <div class="col-md-3">
+            <label for="name">Child Name</label>
+            <input class="form-control" id='name' name="name" placeholder="Name of the child">
+            <label for="date">Date of Birth</label>
+            <input @change="dotheDate" class="form-control" id='datepicker' name="date" placeholder="DOB">
+
+          </div>
+        <div class="col-md-6" >
+            <table class="table">
+              <tr>
+                <th>AGES</th>
+                <th>Due</th>
+            </tr>
+            <tr v-for=" (i,ix) in datestr">
+              <td>{{ i }}</td>
+              <td>{{ dateres[ix-1] }}</td>
+            </tr>
+            </table>
+            <button v-on:click="blow" class="btn btn-default">pop</button>
+        </div>
+        <div class="col-md-3"></div>
+        </div>
+      </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script src="js/vue.js"></script>
+    <script src="js/main.js"></script> 
+  </body>
+</html>
